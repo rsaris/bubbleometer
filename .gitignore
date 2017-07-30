@@ -2,6 +2,7 @@ __pycache__/
 tmp/
 train/
 wav/
+data/
 *.wav
 *.mkv
 *.swp

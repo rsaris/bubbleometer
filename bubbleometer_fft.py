@@ -101,7 +101,9 @@ y = remove(y)
 
 newx,newy = getbubblesperminute(x,y)
 
-print( "Got x data: [" + ",".join( map( str, newx ) ) + "]" )
-print( "Got y data: [" + ",".join( map( str, newy ) ) + "]" )
+# print( "Got x data: [" + ",".join( map( str, newx ) ) + "]" )
+# print( "Got y data: [" + ",".join( map( str, newy ) ) + "]" )
+
+writeit( 'data', newx, newy )
 
 # graphit(newx,newy)

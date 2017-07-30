@@ -7,6 +7,8 @@ from scipy.signal import butter, lfilter
 import datetime as dt
 import scipy.signal as signal
 from scipy.signal import filtfilt
+import csv
+import time
 
 flatten = lambda l: [item for sublist in l for item in sublist]
 
@@ -76,6 +78,17 @@ def graphit(newx,newy):
     fig2.autofmt_xdate()
 
     plt.show()
+
+def writeit( filename, times, bubbles ):
+
+    with open( './data/' + filename + '.csv', 'w', newline='' ) as file:
+
+        writer = csv.writer( file )
+        writer.writerow(['time','bubbles'])
+
+        for i in range(0,len(times)):
+            writer.writerow([time.strftime( '%Y-%m-%d %H:%M:%S', time.localtime( times[i] ) ), bubbles[i]])
+
 
 # Try to remove false bubbles, remove continous 1s and pick first
 def remove(ny):
