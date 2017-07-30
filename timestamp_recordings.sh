@@ -1,1 +1,1 @@
-stat -c'%Z,%N' *.wav > txt
+stat -c'%Z,%N' ./wav/*.wav > ./wav/txt

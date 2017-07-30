@@ -9,9 +9,9 @@ import glob
 import _thread
 import random
 
-from matplotlib.pylab import *
-import matplotlib.pyplot as plt
-import matplotlib.animation as anim
+# from matplotlib.pylab import *
+# import matplotlib.pyplot as plt
+# import matplotlib.animation as anim
 
 from time import sleep
 from collections import deque
@@ -100,4 +100,8 @@ for k, v in od.items():
 y = remove(y)
 
 newx,newy = getbubblesperminute(x,y)
-graphit(newx,newy)
+
+print( "Got x data: [" + ",".join( map( str, newx ) ) + "]" )
+print( "Got y data: [" + ",".join( map( str, newy ) ) + "]" )
+
+# graphit(newx,newy)

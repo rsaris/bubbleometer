@@ -1,9 +1,9 @@
 import numpy as np
 from itertools import tee
 from scipy.signal import butter, lfilter
-from matplotlib.pylab import *
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdate
+# from matplotlib.pylab import *
+# import matplotlib.pyplot as plt
+# import matplotlib.dates as mdate
 import datetime as dt
 import scipy.signal as signal
 from scipy.signal import filtfilt
@@ -20,7 +20,7 @@ def timestampdata():
             v = line.split(",")
             ep = int(v[0])
             wfile = v[1][1:-2]
-            lines.append(("wav/"+wfile,ep))
+            lines.append((wfile,ep))
 
     return lines
 
